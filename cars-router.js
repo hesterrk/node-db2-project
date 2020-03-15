@@ -7,6 +7,7 @@ const router = express.Router();
 
 router.get("/", async (req, res, next) => {
   try {
+    //   res.send('hello')
     const cars = await db("cars");
     res.json(cars);
   } catch (error) {
